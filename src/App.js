@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Section from "./component/section/section.component";
+import Forms from "./component/form/form.component";
+import "./App.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
+// import QR from "./component/QR/qr.component";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Forms />} />
+        <Route path="section/*" element={<Section />} />
+        {/* <Route path="qr/*" element={<QR />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
