@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/*" element={<Forms />} />
+        <Route path="/" element={<Forms />} />
         <Route path="section/*" element={<Section />} />
         {/* <Route path="qr/*" element={<QR />} /> */}
       </Routes>
