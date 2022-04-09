@@ -30,3 +30,11 @@ p {
     /* change the margins as you want them to be. */
   }
 }
+
+iframe {
+  display: block; /* iframes are inline by default */
+  background: #000;
+  border: none; /* Reset default border */
+  height: 50vh; /* Viewport-relative units */
+  width: 80vw;
+}

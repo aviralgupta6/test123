@@ -9,13 +9,16 @@ import {
   Link,
   useRouteMatch,
 } from "react-router-dom";
+import Homepage from "./pages/homepage/homepage";
+import Test from "./pages/homepage/test";
 // import QR from "./component/QR/qr.component";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Forms />} />
+        <Route path="/" element={<Test />} />
+        <Route path="/form" element={<Forms />} />
         <Route path="section/*" element={<Section />} />
         {/* <Route path="qr/*" element={<QR />} /> */}
       </Routes>
